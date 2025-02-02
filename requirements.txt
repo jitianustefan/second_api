@@ -1,7 +1,9 @@
-fastapi==0.95.0
-uvicorn==0.20.0
-pandas==1.5.3
-scikit-learn==1.1.2
+fastapi[all]
+pydantic==2.6.4
+rake-nltk==1.0.6
+pandas==2.1.4
 joblib==1.2.0
+scikit-learn==1.3.2
 nltk==3.8.1
+
 
