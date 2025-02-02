@@ -8,10 +8,10 @@ from sklearn.metrics.pairwise import cosine_similarity
 app = FastAPI(title="Book Recommendation API")
 
 # Încărcăm modelele și datele
-loaded_kmeans = joblib.load("carti_cluster_kmeans.pkl")
-loaded_count = joblib.load("encoder_count_vectorizer.pkl")
-loaded_count_matrix = joblib.load("count_matrix.pkl")
-dataset_carti = pd.read_csv('dataset_carti_content_filtering.csv')
+loaded_kmeans = joblib.load("carti_cluster_kmeans_tfidf.pkl")
+loaded_count = joblib.load("encoder_count_vectorizer_tfidf.pkl")
+loaded_count_matrix = joblib.load("count_matrix_tfidf.pkl")
+dataset_carti = pd.read_csv('dataset_cu_trasaturi_pt_categorii_si_autor_tfidf_v2.csv')
 
 # Creăm matricea de similaritate
 cosine_sim = cosine_similarity(loaded_count_matrix, loaded_count_matrix)
